@@ -16,11 +16,11 @@ key.set("n", "<leader>w", ":w<CR>")
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
-key.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+key.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 -- Remap for dealing with word wrap
-key.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-key.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+key.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+key.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- vertical movement
 key.set("n", "<C-d>", "<C-d>zz")
@@ -31,16 +31,15 @@ key.set("n", "H", "^")
 key.set("n", "L", "$")
 
 -- window management
-key.set("n", "<leader>sv", "<C-w>v", {desc = "Split window vertically"} ) -- split window vertically
-key.set("n", "<leader>sh", "<C-w>s", {desc = "Split windows horizontally"}) -- split windows horizontally
-key.set("n", "<leader>se", "<C-w>=", {desc = "Split windows equal length"}) -- make split windows equal width and height
-key.set("n", "<leader>sx", ":close<CR>", {desc = "Close current split window"}) -- close current split windows
+key.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+key.set("n", "<leader>sh", "<C-w>s", { desc = "Split windows horizontally" }) -- split windows horizontally
+key.set("n", "<leader>se", "<C-w>=", { desc = "Split windows equal length" }) -- make split windows equal width and height
+key.set("n", "<leader>sx", ":close<CR>", { desc = "Close current split window" }) -- close current split windows
 
-key.set("n", "<leader>to", ":tabnew<CR>", {desc = "Open new tab"}) -- open new tab
-key.set("n", "<leader>tx", ":tabclose<CR>", {desc = "Close current tab"}) -- close current tab
-key.set("n", "<leader>tn", ":tabn<CR>", {desc = "Go to next tab"}) -- go to next tab
-key.set("n", "<leader>tp", ":tabp<CR>", {desc = "Go to previous tab"}) -- go to previous tab
-
+key.set("n", "<leader>to", ":tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+key.set("n", "<leader>tx", ":tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+key.set("n", "<leader>tn", ":tabn<CR>", { desc = "Go to next tab" }) -- go to next tab
+key.set("n", "<leader>tp", ":tabp<CR>", { desc = "Go to previous tab" }) -- go to previous tab
 
 ----------------------
 -- Plugin Keybinds
@@ -58,6 +57,7 @@ key.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in cur
 key.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 key.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 key.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+key.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>") -- list available keymaps
 
 -- telescope git commands (not on youtube nvim video)
 key.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
@@ -67,4 +67,3 @@ key.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current chan
 
 -- restart lsp server (not on youtube nvim video)
 key.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-
